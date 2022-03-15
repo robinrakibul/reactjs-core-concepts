@@ -11,7 +11,7 @@ const singerStyle = {
 }
 
 function App() {
-  const singers = ['justin','ariana','celin dione'];
+  const singers = ['justin','ariana','celin dione','william'];
   return (
     <div className="App">
       <header className="App-header">
@@ -26,9 +26,15 @@ function App() {
         </div>
         <div className='App'>
         <Person></Person>
-        <Friend name={singers[0]}></Friend>
+        {
+          singers.map(singer=><li>{singer}</li>)
+        }
+        {
+          singers.map(singer => <Friend name={singer}></Friend>)
+        }
+        {/* <Friend name={singers[0]}></Friend>
         <Friend name={singers[1]}></Friend>
-        <Friend name={singers[2]}></Friend>
+        <Friend name={singers[2]}></Friend> */}
         <Friend name="Jaden"></Friend>
         </div>
       </header>
