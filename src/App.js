@@ -6,7 +6,8 @@ const singer = {name: 'Jaden', job:'singing'};
 
 const singerStyle = {
   color: 'purple',
-  backgroundColor: 'white'
+  backgroundColor: 'white',
+  margin: '30px'
 }
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <div className='App'>
         <Person></Person>
         <Friend></Friend>
+        <Friend name="Jaden"></Friend>
         </div>
       </header>
     </div>
@@ -35,10 +37,10 @@ function Person(){
   return <h1>Returning</h1>
 }
 
-function Friend(){
+function Friend(props){
   return (
     <div className='container'>
-      <h3>Name: Jackey</h3>
+      <h3>Name: {props.name}</h3>
       <p>Job: Fighting</p>
     </div>
   )
